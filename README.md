@@ -1,206 +1,145 @@
-# 🚀 E-Commerce Application Deployment (DevOps Project)
+📦 Ecommerce_Aniket
 
-Welcome to this repository!  
-Here you will learn the **end-to-end deployment of an E-Commerce Application** using DevOps tools and practices.
+A complete Ecommerce Web Application built using Java, Maven, Docker, Jenkins, Nexus, SonarQube, and Trivy — fully automated with a production-grade CI/CD pipeline.
 
----
+🏆 Project Badges
 
-## 📺 Watch the Full Deployment Tutorial
-[![Watch Now](https://img.shields.io/badge/Watch_on-YouTube-red?logo=youtube&logoColor=white)]([https://youtu.be/l-5JQcI_CH0])
 
----
 
-## 🤝 Connect With Me
-[![LinkedIn](https://img.shields.io/badge/Connect-Kastro%20Kiran-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/kastro-kiran/)
 
----
 
-## 💬 Join the DevOps Community
-[![WhatsApp Group](https://img.shields.io/badge/Join-WhatsApp%20Group-green?logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/EGw6ZlwUHZc82cA0vXFnwm)
 
----
 
-### ⚡ What you’ll find here:
-- Complete CI/CD pipeline for E-Commerce Application  
-- Kubernetes, Docker, Jenkins, and monitoring setup  
-- Hands-on DevOps best practices  
 
-Stay tuned, contribute, and let’s grow together in the DevOps journey! 🌍  
+🚀 Project Overview
 
+This repository showcases a complete CI/CD implementation for a Java-based ecommerce application.
+The pipeline automates:
 
-### You can also use MySQL as Database
+Build
 
-- Create or Select a Database
-- Use that Database
-- Insert this queries:
+Test
 
-- CREATE TABLE brand (
-  bid int DEFAULT NULL,
-  bname varchar(50) DEFAULT NULL
-); 
+Code Quality Analysis
 
+Vulnerability Scanning
 
+Artifact Deployment
 
-- INSERT INTO brand VALUES (1,'samsung'),(2,'sony'),(3,'lenovo'),(4,'acer'),(5,'onida');
+Docker Image Build & Push
 
+Application Deployment on AWS EC2
 
+Perfect for DevOps portfolio, LinkedIn, resume, interviews or demo projects.
 
-- CREATE TABLE cart (
-  Name varchar(100) DEFAULT NULL,
-  bname varchar(50) DEFAULT NULL,
-  cname varchar(50) DEFAULT NULL,
-  pname varchar(50) DEFAULT NULL,
-  pprice int DEFAULT NULL,
-  pquantity int DEFAULT NULL,
-  pimage varchar(200) DEFAULT NULL
-);
+🏗️ Architecture Diagram
 
+📌 To make this work:
+Create a folder named assets/ in the root of your repo and upload your architecture diagram as:
 
+assets/architecture.png
 
-- CREATE TABLE category (
-  cid int DEFAULT NULL,
-  cname varchar(50) DEFAULT NULL
-);
+🔄 CI/CD Pipeline Diagram
 
+📌 Upload your pipeline diagram to:
 
+assets/pipeline.png
 
-- INSERT INTO category VALUES (1,'laptop'),(2,'tv'),(3,'mobile'),(4,'watch');
+📸 CI/CD Screenshots
 
+Create a folder named screenshots/ in your repo and upload your images:
 
+screenshots/jenkins_pipeline.png
+screenshots/sonarqube.png
+screenshots/nexus.png
+screenshots/docker_push.png
+screenshots/ec2.png
+screenshots/app_running.png
 
 
-- CREATE TABLE contactus (
-  id int NOT NULL AUTO_INCREMENT,
-  Name varchar(100) DEFAULT NULL,
-  Email_Id varchar(100) DEFAULT NULL,
-  Contact_No int DEFAULT NULL,
-  Message varchar(8000) DEFAULT NULL,
-  PRIMARY KEY (id)
-);
+Then the images will display correctly:
 
+✅ Jenkins Pipeline
 
+✅ SonarQube Analysis
 
+✅ Nexus Repository
 
-- CREATE TABLE customer (
-  Name varchar(100) DEFAULT NULL,
-  Password varchar(20) DEFAULT NULL,
-  Email_Id varchar(100) DEFAULT NULL,
-  Contact_No int DEFAULT NULL
-);
+✅ Docker Push Logs
 
+✅ EC2 Deployment
 
+✅ Live Running App
 
+🛠️ Tech Stack
+Application Technologies
 
-- CREATE TABLE login (
-  username varchar(100) DEFAULT NULL,
-  password varchar(100) DEFAULT NULL
-);
+Java
 
+Maven
 
+JSP/Servlet
 
-- INSERT INTO login VALUES ('admin','admin');
+WAR Deployment
 
-- CREATE TABLE order_details (
-  Date varchar(100) DEFAULT NULL,
-  Name varchar(100) DEFAULT NULL,
-  bname varchar(50) DEFAULT NULL,
-  cname varchar(50) DEFAULT NULL,
-  pname varchar(50) DEFAULT NULL,
-  pprice int DEFAULT NULL,
-  pquantity int DEFAULT NULL,
-  pimage varchar(200) DEFAULT NULL
-);
+DevOps Tools
 
+Jenkins
 
+SonarQube
 
-- CREATE TABLE orders (
-  Order_Id int NOT NULL AUTO_INCREMENT,
-  Customer_Name varchar(100) DEFAULT NULL,
-  Customer_City varchar(45) DEFAULT NULL,
-  Date varchar(100) DEFAULT NULL,
-  Total_Price int DEFAULT NULL,
-  Status varchar(45) DEFAULT NULL,
-  PRIMARY KEY (Order_Id)
-);
+Nexus Repository Manager
 
+Docker
 
+Docker Hub
 
+Trivy Security Scanner
 
-- CREATE TABLE product (
-  pid int NOT NULL AUTO_INCREMENT,
-  pname varchar(50) DEFAULT NULL,
-  pprice int DEFAULT NULL,
-  pquantity int DEFAULT NULL,
-  pimage varchar(200) DEFAULT NULL,
-  bid int DEFAULT NULL,
-  cid int DEFAULT NULL,
-  PRIMARY KEY (pid)
-);
+AWS EC2
 
-
-
-- INSERT INTO product VALUES (5,'sonysmart',50000,1,'sonywatch.webp',2,4),(6,'GalaxyBook',45000,1,'samsunglaptop.jpg',1,1),(7,'smarttv',28000,1,'onidatv.jpg',5,2),(8,'smartphone',15000,1,'lenovomobile.webp',3,3),(9,'aspire',52000,1,'acerlaptop.jpg',4,1),(10,'Braviass',52,1,'sonytv.jpg',2,2),(11,'GalaxyWatch',22000,1,'galaxywatch.webp',1,4),(14,'kdl',45000,1,'sony kdl.jpg',2,2),(15,'series a7',21000,1,'acer series a7.jpg',4,2),(17,'leo',31000,1,'onida leo.jpg',5,2),(18,'crystal',42000,1,'samsung crystal.webp',1,2),(19,'Aspire 7',55000,1,'acer aspire7.jpg',4,1),(20,'ideapad',37000,1,'lenovo ideapad.jpg',3,1),(21,'legion',51000,1,'lenovo legion.jpg',3,1),(22,'Galaxy Z Fold3',66000,1,'Galaxy z fold3.jpg',1,3),(23,'Galaxy S22',55000,1,'Samsung galaxy s22.webp',1,3),(24,'Xperia 1v',56000,1,'sony xperia 1v.jpg',2,3),(26,'A850',14500,1,'lenovo a850.jpg',3,3),(27,'Galaxy watch1',8000,1,'galaxy watch.jpg',1,4),(28,'Galaxy Watch2',95000,1,'galaxy watch4.jpg',1,4),(29,'Smart Fit',11000,1,'smart fit.jpg',3,4),(30,'Sony Smart2',12000,1,'sony smart2.webp',2,4),(31,'Gaming Predator',120000,1,'Acer Predator.jpg',4,1),(32,'Liquid',16000,1,'Acer liquid.jpg',4,3),(33,'Neo QLED',46000,1,'Samsung neo Qled.webp',1,2),(34,'VAIO',53000,1,'Sony Vaio.jpg',2,1),(35,'Xperia Z',32000,1,'sonyxperiaz.png',2,3);
-
-
-
-
-
-- CREATE VIEW `viewlist` AS select `brand`.`bname` AS `bname`,`category`.`cname` AS `cname`,`product`.`pname` AS `pname`,`product`.`pprice` AS `pprice`,`product`.`pquantity` AS `pquantity`,`product`.`pimage` AS `pimage` from ((`brand` join `product` on((`brand`.`bid` = `product`.`bid`))) join `category` on((`product`.`cid` = `category`.`cid`))) ;
-
-
-
-
-- CREATE VIEW `mobile` AS select `brand`.`bname` AS `bname`,`category`.`cname` AS `cname`,`product`.`pname` AS `pname`,`product`.`pprice` AS `pprice`,`product`.`pquantity` AS `pquantity`,`product`.`pimage` AS `pimage` from ((`brand` join `product` on((`brand`.`bid` = `product`.`bid`))) join `category` on((`product`.`cid` = `category`.`cid`))) where (`category`.`cid` = 3) ;
-
-
-
-
-- CREATE VIEW `laptop` AS select `brand`.`bname` AS `bname`,`category`.`cname` AS `cname`,`product`.`pname` AS `pname`,`product`.`pprice` AS `pprice`,`product`.`pquantity` AS `pquantity`,`product`.`pimage` AS `pimage` from ((`brand` join `product` on((`brand`.`bid` = `product`.`bid`))) join `category` on((`product`.`cid` = `category`.`cid`))) where (`category`.`cid` = 1) ;
-
-
-
-
-- CREATE VIEW `tv` AS select `brand`.`bname` AS `bname`,`category`.`cname` AS `cname`,`product`.`pname` AS `pname`,`product`.`pprice` AS `pprice`,`product`.`pquantity` AS `pquantity`,`product`.`pimage` AS `pimage` from ((`brand` join `product` on((`brand`.`bid` = `product`.`bid`))) join `category` on((`product`.`cid` = `category`.`cid`))) where (`category`.`cid` = 2) ;
-
-
-
-
-- CREATE VIEW `watch` AS select `brand`.`bname` AS `bname`,`category`.`cname` AS `cname`,`product`.`pname` AS `pname`,`product`.`pprice` AS `pprice`,`product`.`pquantity` AS `pquantity`,`product`.`pimage` AS `pimage` from ((`brand` join `product` on((`brand`.`bid` = `product`.`bid`))) join `category` on((`product`.`cid` = `category`.`cid`))) where (`category`.`cid` = 4) ;
-
-
-
-- CREATE TABLE usermaster (
-  Name varchar(100) DEFAULT NULL,
-  Password varchar(20) DEFAULT NULL
-);
-
-
-- INSERT INTO usermaster VALUES ('admin','admin');
-
-### Now do some changes in Project
-- In Eclipse
-- Open Project > open com.conn package > open DBConnect.java file.
-   Now make some changes in this file,
-   change "conn" value,
-  like if it is
-   
-   conn = DriverManager.getConnection("jdbc:sqlite:C:/Users/Swapnil/eclipse- 
-   workspace/Online Electronic Shopping/mydatabase.db");
-   
-   change it to
-
-  conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/DatabaseName","root","root");
-
-
-  Note: Put Address according to your Database Name and Password.
-
-  - Save the file
-
-  - Now try running Project and Check if the changes are done or not.
-
-   
-
-
-### Deployed by: Kastro Kiran V
-
-
+Git & GitHub
+
+📁 Repository Structure
+Ecommerce_Aniket/
+│── src/
+│── Dockerfile
+│── pom.xml
+│── Jenkinsfile
+│── README.md
+│── assets/
+│   ├── architecture.png
+│   └── pipeline.png
+│── screenshots/
+│   ├── jenkins_pipeline.png
+│   ├── sonarqube.png
+│   ├── nexus.png
+│   ├── docker_push.png
+│   ├── ec2.png
+│   └── app_running.png
+
+🔧 Local Build Instructions
+Compile
+mvn compile
+
+Package
+mvn package -DskipTests=true
+
+Run Using Docker
+docker build -t aniketgh5/ecommerce:latest .
+docker run -p 8080:8080 aniketgh5/ecommerce:latest
+
+🔗 Important Links
+👨‍💻 Developer – Aniket Ghosh
+
+🔗 LinkedIn: https://www.linkedin.com/in/aniketghosh6/
+
+📧 Email: checkaniket@gmail.com
+
+📝 License
+
+Open-source project — free to use for learning & portfolio.
+
+⭐ Support
+
+If you find this project helpful, please consider giving it a ⭐ on GitHub!
